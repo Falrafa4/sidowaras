@@ -314,7 +314,6 @@ main .sidowaras .desc-sda {
 .bmi {
     height: fit-content;
     display: flex;
-    /* align-items: center; */
     gap: 5rem;
     padding: 3rem 0;
 }
@@ -356,42 +355,55 @@ main .sidowaras .desc-sda {
 
 
 /* SECTION BMR */
+.bmr {
+    height: fit-content;
+    display: flex;
+    gap: 5rem;
+    padding: 3rem 0;
+}
+
+.desc-bmr {
+    margin-right: 5rem;
+    width: 80dvw;
+}
+
 .img-bmr {
     width: 500px;
     padding-top: 40px;
 }
 
 .img-bmr img {
-    width: 500px;
-    height: 500px;
+    /* position: absolute;
+    left: -5rem; */
+    width: 30rem;
+    height: 30rem;
     object-fit: cover;
     clip-path: circle(50%);
-    transform: translateX(-60px);
-}
-
-.img-bmr {
-    overflow: hidden;
-    flex-shrink: 0;
-}
-
-.img-bmr img {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    clip-path: circle(50%);
-}
-
-.desc-bmr {
-    flex: 1;
 }
 
 .bmr .accordion {
-    background-color: #e6f0e6;
+    background-color: #F6FFF8;
     color: #395B40;
-    border-radius: 5px;
-    margin: 10px 0;
     padding: 10px 15px;
     cursor: pointer;
+}
+
+.bmr .panel {
+    padding: 0 18px;
+    background-color: #F6FFF8;
+    color: #395B40;
+}
+
+.bmr .accordion:hover {
+    background-color: #ebfceb;
+}
+
+.bmr .accordion:after {
+    color: #395B40;
+}
+
+.bmr .active:after {
+    color: #395B40;
 }
 
 .bmr .hitung {
@@ -406,7 +418,7 @@ main .sidowaras .desc-sda {
 }
 
 .bmr .hitung:hover {
-    background-color: #e6f0e6;
+    background-color: #F6FFF8;
 }
 
 /* SECTION BMR END */
