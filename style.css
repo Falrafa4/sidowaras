@@ -41,7 +41,7 @@ nav {
     width: 100%;
     top: 0;
     display: flex;
-    background-color: rgba(57, 91, 64, 0.8);
+    background-color: rgba(57, 91, 64, 1);
     justify-content: space-between;
     align-items: center;
     padding: 0px 60px;
@@ -225,6 +225,10 @@ main .sidowaras .desc-sda {
     text-align: end;
 }
 
+.data a {
+    color: #fff;
+}
+
 .desc-data {
     display: flex;
     justify-content: center;
@@ -253,9 +257,10 @@ main .sidowaras .desc-sda {
     background-color: #395B40;
     color: #fff;
     cursor: pointer;
-    padding: 18px;
+    padding: 18px !important;
     width: 100%;
     border: none;
+    border-bottom: 1px solid rgb(235, 252, 235, 0.2);
     text-align: left;
     outline: none;
     font-size: 15px;
@@ -318,6 +323,10 @@ main .sidowaras .desc-sda {
     padding: 3rem 0;
 }
 
+.bmi hr {
+    width: 25rem;
+}
+
 .desc-bmi {
     margin-left: 5rem;
     width: 80dvw;
@@ -359,7 +368,11 @@ main .sidowaras .desc-sda {
     height: fit-content;
     display: flex;
     gap: 5rem;
-    padding: 3rem 0;
+    padding: 3rem 0 10rem 0;
+}
+
+.bmr hr {
+    width: 25rem;
 }
 
 .desc-bmr {
@@ -386,11 +399,12 @@ main .sidowaras .desc-sda {
     color: #395B40;
     padding: 10px 15px;
     cursor: pointer;
+    border-bottom: 1px solid rgb(57, 91, 64, 0.3);
 }
 
 .bmr .panel {
     padding: 0 18px;
-    background-color: #F6FFF8;
+    background-color: #ebfceb;
     color: #395B40;
 }
 
@@ -407,18 +421,20 @@ main .sidowaras .desc-sda {
 }
 
 .bmr .hitung {
-    background-color: white;
-    color: #395B40;
-    border: none;
-    padding: 10px 20px;
+    background-color: #ebfceb;
+    border: 1px solid #ebfceb;
+    padding: 0.8rem 4rem;
+    margin-top: 1.3rem;
     border-radius: 5px;
+    color: #395B40;
     cursor: pointer;
-    margin-top: 15px;
-    font-weight: bold;
+    transition: .3s;
 }
 
 .bmr .hitung:hover {
-    background-color: #F6FFF8;
+    border: 1px solid #ebfceb;
+    background-color: #395B40;
+    color: #ebfceb;
 }
 
 /* SECTION BMR END */
@@ -426,15 +442,32 @@ main .sidowaras .desc-sda {
 /* SECTION QUOTE */
 .quote {
     background-color: #F6FFF8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-style: italic;
+    color: #395B40;
 }
 
+.quote h1 {
+    font-size: 2.5rem;
+}
+
+.quote hr {
+    margin-top: 30px;
+    width: 15rem;
+    border: none;
+    border-bottom: 1px solid #395B40;
+}
 /* SECTION QUOTE END */
 
 
 footer {
     display: flex;
     background-color: #395B40;
-    padding: 40px 170px;
+    padding: 40px 100px;
     justify-content: space-between;
 }
 
@@ -446,6 +479,7 @@ footer h1 {
 hr {
     margin-top: 12px;
     margin-bottom: 25px;
+    opacity: 1;
 }
 
 footer .icons {
@@ -463,7 +497,6 @@ footer .social .invisible {
 
 footer .social {
     display: flex;
-    padding: 10px;
     color: #fff;
     gap: 1.2em;
 }
@@ -474,6 +507,11 @@ footer .social .fas {
 
 footer .social p {
     font-family: "Poppins";
+}
+
+footer .left hr {
+    border: none;
+    border-bottom: 1px solid #fff;
 }
 
 footer .right {
@@ -490,7 +528,7 @@ footer .right p {
 footer .right a {
     font-size: 0.9rem;
     text-decoration: none;
-    color: #fff;
+    color: #ccc;
     font-family: "Poppins";
     margin-top: 10px;
 }
