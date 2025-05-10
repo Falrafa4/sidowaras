@@ -1,0 +1,484 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Uncial+Antiqua&display=swap');
+
+:root {
+    --green: #395B40
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    height: 100dvh;
+    font-family: "Poppins";
+    background-color: #F6FFF8;
+}
+
+.logo {
+    font-family: "Uncial Antiqua";
+    text-decoration: none;
+    color: #fff;
+}
+
+.logo h1 {
+    font-weight: normal;
+    font-size: 1.5rem;
+}
+
+h1, ul {
+    margin-bottom: 0;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    background-color: rgba(57, 91, 64, 0.8);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 60px;
+    z-index: 99;
+    height: 10dvh;
+    border-bottom: 1px solid #ffffff15;
+}
+
+nav ul {
+    display: flex;
+    gap: 2.2rem;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul li a {
+    color: #cccccc;
+    font-size: 0.95rem;
+    font-family: "Poppins";
+    text-decoration: none;
+    transition: all .3s;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(57, 91, 64, 0.7);
+}
+
+header img {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 90%;
+}
+
+header h1 {
+    font-family: "Uncial Antiqua";
+    font-size: 6.5rem;
+}
+
+header .main-content {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.9rem;
+    letter-spacing: 0.25rem;
+}
+
+header .main-content a {
+    color: black;
+    background-color: #fff;
+    border: 1px solid #fff;
+    margin-top: 20px;
+    padding: 15px 50px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+header .main-content a:hover {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+section {
+    height: 100dvh;
+}
+
+section h1 {
+    font-family: 'DM Serif Display';
+    font-size: 4rem;
+    font-weight: normal;
+}
+
+section:nth-of-type(odd) {
+    background-color: #395B40;
+    color: #fff;
+}
+
+/* SECTION SIDOWARAS STYLE */
+.logo-sda {
+    position: absolute;
+    width: 6rem;
+    margin-top: 1rem;
+    left: 1rem;
+}
+
+.jayandaru {
+    display: flex;
+    height: 100%;
+    border-radius: 0px 200px 0px 0px;
+}
+
+main .sidowaras {
+    width: 100%;
+    height: 100dvh;
+    justify-content: space-between;
+    padding-right: 5rem;
+    text-align: end;
+}
+
+.sidowaras .desc-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+main .sidowaras hr {
+    width: 23rem;
+}
+
+main .sidowaras .desc-sda {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.desc-sda p {
+    margin-top: 30px;
+    font-size: 1.05rem;
+}
+
+/* SECTION SIDOWARAS END */
+
+
+/* SECTION NUTRIZI */
+.nutrizi {
+    height: 100dvh;
+    display: flex;
+    gap: 5rem;
+}
+
+.nutrizi hr {
+    width: 20rem;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.img-nutrizi img {
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+    width: 50dvw;
+    object-fit: cover;
+    align-items: flex-end;
+    border-radius: 100rem 0 0 100rem;
+}
+
+.desc-nutrizi {
+    margin-left: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* SECTION NUTRIZI END */
+
+
+/* SECTION DATA NUTRISI */
+.data {
+    height: 100dvh;
+    display: flex;
+    gap: 5rem;
+    text-align: end;
+}
+
+.desc-data {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 5rem;
+}
+
+.desc-data hr {
+    width: 15rem;
+    margin-left: auto;
+}
+
+.img-data img {
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+    width: 40dvw;
+    object-position: right center;
+    object-fit: cover;
+    align-items: flex-end;
+}
+/* SECTION DATA NUTRISI END */
+
+/* ACCORDION */
+.accordion {
+    background-color: #395B40;
+    color: #fff;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.accordion:hover {
+    background-color: #4B7253;
+}
+
+.accordion:after {
+    font-family: 'Material Symbols Outlined';
+    content: "keyboard_arrow_down";
+    color: #fff;
+    font-size: 1.2rem;
+    float: right;
+    margin-left: 5px;
+}
+
+.accordion:first-of-type {
+    border-radius: 5px 5px 0 0;
+}
+
+.accordion:last-of-type {
+    border-radius: 0 0 5px 5px;
+}
+
+.active:after {
+    font-family: 'Material Symbols Outlined';
+    content: "keyboard_arrow_up";
+    color: #fff;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: #4B7253;
+    color: #fff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
+.panel:last-of-type {
+    border-radius: 0 0 5px 5px;
+}
+
+.panel p {
+    padding: 10px 0px;
+}
+
+.panel ol {
+    padding: 10px 18px;
+}
+
+/* SECTION BMI */
+.bmi {
+    height: fit-content;
+    display: flex;
+    /* align-items: center; */
+    gap: 5rem;
+    padding: 3rem 0;
+}
+
+.desc-bmi {
+    margin-left: 5rem;
+    width: 80dvw;
+}
+
+.img-bmi {
+    overflow: hidden;
+}
+
+.img-bmi img {
+    width: 30rem;
+    height: 30rem;
+    object-fit: cover;
+    clip-path: circle(50%);
+}
+
+.bmi .hitung {
+    background-color: #395B40;
+    border: 1px solid #395B40;
+    padding: 0.8rem 4rem;
+    margin-top: 1.3rem;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.bmi .hitung:hover {
+    background-color: transparent;
+    border: 1px solid #395B40;
+    color: #395B40;
+}
+
+/* SECTION BMI END */
+
+
+/* SECTION BMR */
+.img-bmr {
+    width: 500px;
+    padding-top: 40px;
+}
+
+.img-bmr img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    clip-path: circle(50%);
+    transform: translateX(-60px);
+}
+
+.img-bmr {
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.img-bmr img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    clip-path: circle(50%);
+}
+
+.desc-bmr {
+    flex: 1;
+}
+
+.bmr .accordion {
+    background-color: #e6f0e6;
+    color: #395B40;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.bmr .hitung {
+    background-color: white;
+    color: #395B40;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.bmr .hitung:hover {
+    background-color: #e6f0e6;
+}
+
+/* SECTION BMR END */
+
+/* SECTION QUOTE */
+.quote {
+    background-color: #F6FFF8;
+}
+
+/* SECTION QUOTE END */
+
+
+footer {
+    display: flex;
+    background-color: #395B40;
+    padding: 40px 170px;
+    justify-content: space-between;
+}
+
+footer h1 {
+    font-family: "Uncial Antiqua";
+    color: #fff;
+}
+
+hr {
+    margin-top: 12px;
+    margin-bottom: 25px;
+}
+
+footer .icons {
+    color: #fff;
+}
+
+footer .icons .fab {
+    padding: 20px;
+    font-size: 1.6em;
+}
+
+footer .social .invisible {
+    color: #395B40;
+}
+
+footer .social {
+    display: flex;
+    padding: 10px;
+    color: #fff;
+    gap: 1.2em;
+}
+
+footer .social .fas {
+    font-size: 1.2em
+}
+
+footer .social p {
+    font-family: "Poppins";
+}
+
+footer .right {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .right p {
+    text-decoration: none;
+    color: #fff;
+    font-family: "Poppins";
+}
+
+footer .right a {
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: #fff;
+    font-family: "Poppins";
+    margin-top: 10px;
+}
