@@ -4,6 +4,18 @@
   --green: #395b40;
 }
 
+@keyframes coolTransition {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -19,6 +31,10 @@ body {
   height: 100dvh;
   font-family: "Poppins";
   background-color: #f6fff8;
+}
+
+button, input, optgroup, select, textarea {
+    font-family: inherit;
 }
 
 .logo {
@@ -42,7 +58,7 @@ nav {
   width: 100%;
   top: 0;
   display: flex;
-  background-color: rgba(57, 91, 64, 0.6);
+  background-color: rgba(57, 91, 64, 0.9);
   justify-content: space-between;
   align-items: center;
   padding: 0px 60px;
@@ -359,6 +375,7 @@ main .sidowaras .desc-sda {
   color: #395b40;
 }
 
+/* INPUT BMI */
 .bmi #inputBmiOverlay {
   align-items: center;
   justify-content: center;
@@ -370,25 +387,31 @@ main .sidowaras .desc-sda {
   left: 0;
   right: 0;
   bottom: 0;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  z-index: 3;
+  cursor: default;
+}
+
+.bmi #inputBmiOverlay .bg {
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 2;
-  cursor: pointer;
+  width: 100%;
+  height: 100%;
 }
 
 .bmi .bmiInputContainer .bmiInputWrapper {
   background-color: #f6fff8;
+  border-radius: 15px;
   position: absolute;
   display: flex;
   flex-direction: column;
-  padding: 16px;
-  width: 30%;
-}
-
-.bmi .bmiInputContainer .bmiInputWrapper .title-input {
-  padding: 0px 0px 0px 25px;
+  padding: 2rem;
+  width: 40%;
+  animation: coolTransition 0.5s;
 }
 
 .bmi .bmiInputContainer .bmiInputWrapper .title-input h1 {
+  font-family: 'poppins';
+  font-weight: 500;
   font-size: 2rem;
 }
 
@@ -401,38 +424,60 @@ main .sidowaras .desc-sda {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 4px;
+  gap: 15px;
   width: 100%;
 }
 
 .bmi .bmiInputContainer .bmiInputWrapper #input {
-  width: 86.89%;
+  width: 100%;
   border: 1px solid #395b40;
   padding-top: 5px;
   padding-bottom: 5px;
 }
 
-.bmi .bmiInputContainer .bmiInputWrapper .input .inputBb,
-.bmi .bmiInputContainer .bmiInputWrapper .input .inputTb {
+.bmi .bmiInputContainer .bmiInputWrapper .input input {
   background-color: #fff;
-  padding-left: 6px;
-  padding-right: 4px;
+  border: 1px solid #ccc !important;
+  border-radius: 5px;
+  height: 2.5rem;
+  padding: 0 15px;
+}
+
+.bmi .bmiInputContainer .bmiInputWrapper .input input:focus {
+  outline: none;
+  border: 1px solid #395b40 !important;
 }
 
 .bmi .bmiInputContainer .bmiInputWrapper .input .submitBmi {
   background-color: #395b40;
+  border-radius: 5px;
+  height: 2.5rem;
   color: #fff;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.bmi .bmiInputContainer .bmiInputWrapper .input .submitBmi:hover {
+  background-color: #4b7253;
+}
+
+.bmi .bmiInputContainer .bmiInputWrapper .input .kembali {
+  background-color: #f6fff8;
+  border-radius: 5px;
+  height: 2.5rem;
+  color: #395b40;
+  cursor: pointer;
 }
 
 .bmi .bmiInputContainer .bmiInputWrapper #output.output {
   display: none;
   align-items: center;
   justify-content: center;
-  padding-left: 6%;
-  padding-right: 5%;
   padding-top: 15px;
   padding-bottom: 10px;
+  animation: coolTransition 0.3s;
 }
+/* INPUT BMI END */
 
 /* SECTION BMI END */
 
@@ -441,7 +486,7 @@ main .sidowaras .desc-sda {
   height: fit-content;
   display: flex;
   gap: 5rem;
-  padding: 3rem 0 10rem 0;
+  padding: 3rem 0;
 }
 
 .bmr hr {
@@ -494,8 +539,8 @@ main .sidowaras .desc-sda {
 }
 
 .bmr .hitung {
-  background-color: #ebfceb;
-  border: 1px solid #ebfceb;
+  background-color: #f6fff8;
+  border: 1px solid #f6fff8;
   padding: 0.8rem 4rem;
   margin-top: 1.3rem;
   border-radius: 5px;
@@ -505,11 +550,12 @@ main .sidowaras .desc-sda {
 }
 
 .bmr .hitung:hover {
-  border: 1px solid #ebfceb;
+  border: 1px solid #f6fff8;
   background-color: #395b40;
-  color: #ebfceb;
+  color: #f6fff8;
 }
 
+/* INPUT BMR */
 .bmr #inputBmrOverlay {
   align-items: center;
   justify-content: center;
@@ -523,31 +569,36 @@ main .sidowaras .desc-sda {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 2;
-  cursor: pointer;
+  cursor: default;
 }
 
 .bmr .bmrInputWrapper {
   background-color: #395b40;
+  border-radius: 15px;
   position: absolute;
   display: flex;
   flex-direction: column;
-  padding: 16px;
+  padding: 2rem;
   width: 40%;
-  height: 75%;
+  height: fit-content;
+  animation: coolTransition 0.5s;
 }
 
 .bmr .bmrInputWrapper .title-input {
-  padding-top: 20px;
-  color: #fff;
+    color: #fff;
 }
+
 .bmr .bmrInputWrapper .title-input h1 {
-  font-size: 2.2rem;
-  width: 49%;
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 2rem;
 }
+
 .bmr .bmrInputWrapper .title-input hr {
   width: 55%;
 }
-.bmr .bmrInputWrapper .input form {
+
+.bmr .bmrInputWrapper .input {
   display: grid;
   grid-template-areas:
     "inputBb inputUmur"
@@ -555,7 +606,27 @@ main .sidowaras .desc-sda {
     "aktivitas aktivitas"
     "submit submit"
     "kembali kembali";
-  gap: 10px;
+  gap: 15px;
+}
+
+.bmr .bmrInputContainer .bmrInputWrapper .input input,
+.bmr .bmrInputContainer .bmrInputWrapper .input select {
+  background-color: #f6fff8;
+  border: 1px solid #ccc !important;
+  border-radius: 5px;
+  height: 2.5rem;
+  padding: 0 15px;
+}
+
+.bmr .bmrInputContainer .bmrInputWrapper .input select {
+    cursor: pointer;
+}
+
+.bmr .bmrInputContainer .bmrInputWrapper .input input:focus,
+.bmr .bmrInputContainer .bmrInputWrapper .input select:focus {
+  outline: none;
+  border: 1px solid #f6fff8 !important;
+  box-shadow: 0px 0px 5px #f6fff8;
 }
 
 .bmr .bmrInputWrapper #input {
@@ -563,14 +634,40 @@ main .sidowaras .desc-sda {
   padding: 6px;
 }
 
-.bmr .bmrInputWrapper .input form .tingkatAktivitas {
+.bmr .bmrInputWrapper .input .tingkatAktivitas {
   grid-area: aktivitas;
 }
-.bmr .bmrInputWrapper .input form .submitBmr {
+
+.bmr .bmrInputWrapper .input .submitBmr {
   grid-area: submit;
+  background-color: #f6fff8;
+  border: none;
+  border: 1px solid #f6fff8 ;
+  border-radius: 5px;
+  height: 2.5rem;
+  color: #395b40;
+  cursor: pointer;
+  transition: .3s;
 }
-.bmr .bmrInputWrapper .input form .kembali {
+
+.bmr .bmrInputWrapper .input .submitBmr:hover {
+    background-color: #395b40;
+    color: #f6fff8;
+    border: 1px solid #f6fff8;
+}
+
+.bmr .bmrInputWrapper .input .kembali {
   grid-area: kembali;
+  background-color: #f6fff8;
+  border: none;
+  border-radius: 5px;
+  height: 2.5rem;
+  color: #395b40;
+  cursor: pointer;
+}
+
+.bmr .bmrInputWrapper .input .kembali:hover {
+    background-color: #ebfceb;
 }
 
 /* SECTION BMR END */
@@ -585,6 +682,7 @@ main .sidowaras .desc-sda {
   text-align: center;
   font-style: italic;
   color: #395b40;
+  height: 80dvh;
 }
 
 .quote h1 {
@@ -604,6 +702,7 @@ footer {
   background-color: #395b40;
   padding: 40px 100px;
   justify-content: space-between;
+  cursor: default;
 }
 
 footer h1 {
@@ -615,6 +714,10 @@ hr {
   margin-top: 12px;
   margin-bottom: 25px;
   opacity: 1;
+}
+
+footer .middle {
+    width: 40%;
 }
 
 footer .icons {
@@ -632,6 +735,7 @@ footer .social .invisible {
 
 footer .social {
   display: flex;
+  padding: 0.3rem 0;
   color: #fff;
   gap: 1.2em;
 }
@@ -666,4 +770,9 @@ footer .right a {
   color: #ccc;
   font-family: "Poppins";
   margin-top: 10px;
+  transition: .3s;
+}
+
+footer .right a:hover {
+    color: #fff;
 }
