@@ -520,6 +520,7 @@ main .desc-sda .detail-desc p {
   display: flex;
   gap: 5rem;
   padding: 3rem 0;
+  box-shadow: 0px 10px 0px 10px rgba(57, 91, 64, 1) !important;
 }
 
 .bmr hr {
@@ -853,6 +854,10 @@ footer .right a:hover {
 }
 
 @media screen and (max-width: 768px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
   nav {
     display: flex;
     justify-content: space-between;
@@ -869,7 +874,7 @@ footer .right a:hover {
   }
 
   nav .logo h1 {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   nav ul {
