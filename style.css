@@ -5,15 +5,15 @@
 }
 
 @keyframes coolTransition {
-    from {
-        opacity: 0;
-        transform: translateY(-100px);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 * {
@@ -33,8 +33,12 @@ body {
   background-color: #f6fff8;
 }
 
-button, input, optgroup, select, textarea {
-    font-family: inherit;
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
 }
 
 .logo {
@@ -58,7 +62,7 @@ nav {
   width: 100%;
   top: 0;
   display: flex;
-  background-color: rgba(57, 91, 64, 0.9);
+  background-color: rgba(57, 91, 64, 0.95);
   justify-content: space-between;
   align-items: center;
   padding: 0px 60px;
@@ -67,9 +71,17 @@ nav {
   border-bottom: 1px solid #ffffff15;
 }
 
+#toggleSideBar {
+  display: none;
+}
+
 nav ul {
   display: flex;
   gap: 2.2rem;
+}
+
+nav ul.active::after {
+  display: none;
 }
 
 nav ul li {
@@ -176,17 +188,6 @@ main .sidowaras {
   text-align: end;
 }
 
-.sidowaras .desc-title {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-
-main .sidowaras hr {
-  width: 23rem;
-}
-
 main .sidowaras .desc-sda {
   width: 60%;
   display: flex;
@@ -194,11 +195,17 @@ main .sidowaras .desc-sda {
   justify-content: center;
 }
 
-.desc-sda p {
-  margin-top: 30px;
-  font-size: 1.05rem;
+main .desc-sda .sidowaras .desc-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
+main .desc-sda .detail-desc p {
+  margin-top: 20px;
+  font-size: 0.95rem;
+}
 /* SECTION SIDOWARAS END */
 
 /* SECTION NUTRIZI */
@@ -230,13 +237,18 @@ main .sidowaras .desc-sda {
   flex-direction: column;
   justify-content: center;
 }
+
+.desc-nutrizi p {
+  margin-top: 20px;
+  font-size: 0.95rem;
+}
 /* SECTION NUTRIZI END */
 
 /* SECTION DATA NUTRISI */
 .data {
   height: 100dvh;
   display: flex;
-  gap: 5rem;
+  gap: 10rem;
   text-align: end;
 }
 
@@ -254,6 +266,19 @@ main .sidowaras .desc-sda {
 .desc-data hr {
   width: 15rem;
   margin-left: auto;
+}
+
+.desc-data p {
+  margin-top: 20px;
+  font-size: 0.95rem;
+}
+
+.desc-data .source {
+  font-size: 0.6rem;
+}
+
+.desc-data .source i {
+  font-size: 0.5rem;
 }
 
 .img-data img {
@@ -388,7 +413,7 @@ main .sidowaras .desc-sda {
   right: 0;
   bottom: 0;
   /* background-color: rgba(0, 0, 0, 0.5); */
-  z-index: 3;
+  z-index: 100;
   cursor: default;
 }
 
@@ -410,7 +435,7 @@ main .sidowaras .desc-sda {
 }
 
 .bmi .bmiInputContainer .bmiInputWrapper .title-input h1 {
-  font-family: 'poppins';
+  font-family: "poppins";
   font-weight: 500;
   font-size: 2rem;
 }
@@ -454,7 +479,7 @@ main .sidowaras .desc-sda {
   height: 2.5rem;
   color: #fff;
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .bmi .bmiInputContainer .bmiInputWrapper .input .submitBmi:hover {
@@ -568,7 +593,7 @@ main .sidowaras .desc-sda {
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 2;
+  z-index: 100;
   cursor: default;
 }
 
@@ -585,11 +610,11 @@ main .sidowaras .desc-sda {
 }
 
 .bmr .bmrInputWrapper .title-input {
-    color: #fff;
+  color: #fff;
 }
 
 .bmr .bmrInputWrapper .title-input h1 {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-weight: 500;
   font-size: 2rem;
 }
@@ -601,8 +626,8 @@ main .sidowaras .desc-sda {
 .bmr .bmrInputWrapper .input {
   display: grid;
   grid-template-areas:
-    "inputBb inputUmur"
-    "inputTb jekel"
+    "inputBbBmr inputUsia"
+    "inputTbBmr jekel"
     "aktivitas aktivitas"
     "submit submit"
     "kembali kembali";
@@ -619,11 +644,16 @@ main .sidowaras .desc-sda {
 }
 
 .bmr .bmrInputContainer .bmrInputWrapper .input select {
-    cursor: pointer;
+  cursor: pointer;
+}
+
+.bmr .bmrInputContainer .bmrInputWrapper .input select:valid {
+  color: gray;
 }
 
 .bmr .bmrInputContainer .bmrInputWrapper .input input:focus,
 .bmr .bmrInputContainer .bmrInputWrapper .input select:focus {
+  color: black;
   outline: none;
   border: 1px solid #f6fff8 !important;
   box-shadow: 0px 0px 5px #f6fff8;
@@ -642,18 +672,18 @@ main .sidowaras .desc-sda {
   grid-area: submit;
   background-color: #f6fff8;
   border: none;
-  border: 1px solid #f6fff8 ;
+  border: 1px solid #f6fff8;
   border-radius: 5px;
   height: 2.5rem;
   color: #395b40;
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .bmr .bmrInputWrapper .input .submitBmr:hover {
-    background-color: #395b40;
-    color: #f6fff8;
-    border: 1px solid #f6fff8;
+  background-color: #395b40;
+  color: #f6fff8;
+  border: 1px solid #f6fff8;
 }
 
 .bmr .bmrInputWrapper .input .kembali {
@@ -667,9 +697,23 @@ main .sidowaras .desc-sda {
 }
 
 .bmr .bmrInputWrapper .input .kembali:hover {
-    background-color: #ebfceb;
+  background-color: #ebfceb;
 }
 
+.bmr .bmrInputContainer #outputBmr.outputBmr {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  animation: coolTransition 0.3s;
+  flex-direction: column;
+}
+
+.bmr .bmrInputContainer #outputBmr.outputBmr table {
+  color: black;
+  background-color: #F6FFF8;
+}
 /* SECTION BMR END */
 
 /* SECTION QUOTE */
@@ -717,7 +761,7 @@ hr {
 }
 
 footer .middle {
-    width: 40%;
+  width: 33%;
 }
 
 footer .icons {
@@ -746,6 +790,7 @@ footer .social .fas {
 
 footer .social p {
   font-family: "Poppins";
+  font-size: 0.9rem;
 }
 
 footer .left hr {
@@ -770,9 +815,378 @@ footer .right a {
   color: #ccc;
   font-family: "Poppins";
   margin-top: 10px;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 footer .right a:hover {
-    color: #fff;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+  }
+
+  nav #toggleSideBar {
+    display: inline-block;
+    color: white;
+  }
+
+  nav #toggleSideBar i {
+    font-size: 1.3rem;
+  }
+
+  nav .logo h1 {
+    font-size: 1rem;
+  }
+
+  nav ul {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: rgba(57, 91, 64, 0.95);
+    width: 40%;
+    height: 100vh;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    gap: 20px;
+    padding-top: 30px;
+    /* align-items: center; */
+  }
+
+  nav ul.active {
+    right: 0;
+  }
+
+  nav ul.active::after {
+    display: none;
+  }
+  nav li {
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    /* justify-content: center; */
+  }
+
+  nav li a {
+    font-size: 0.9rem !important;
+    color: #fff !important;
+    text-align: left;
+  }
+
+  header {
+    width: 100dvw;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  header .main-content {
+    font-size: 0.7rem;
+    text-align: center;
+    padding: 0 25px;
+  }
+
+  header .main-content a {
+    padding: 10px 40px;
+  }
+
+  section {
+    height: fit-content !important;
+    text-align: left !important;
+    flex-direction: column;
+    width: 100dvw;
+    overflow: hidden;
+    gap: 0rem !important;
+    padding-top: 0 !important;
+    padding-bottom: 3rem !important;
+  }
+
+  section hr {
+    width: 50% !important;
+  }
+
+  section h1 {
+    font-size: 2rem;
+    padding-top: 2rem;
+  }
+
+  section p {
+    margin-top: 10px !important;
+    font-size: 0.8rem !important;
+  }
+
+  /* SECTION SIDOWARAS */
+  .logo-sda {
+    width: 3rem;
+  }
+
+  main .sidowaras {
+    padding-right: 0;
+    padding-bottom: 3rem;
+  }
+
+  .jayandaru {
+    width: 100dvw;
+    height: 25rem;
+    object-fit: cover;
+    border-radius: 0px;
+  }
+
+  .sidowaras .desc-sda {
+    padding: 0 20px;
+    width: 100% !important;
+  }
+  /* SECTION SIDOWARAS END */
+
+  /* SECTION NUTRIZI */
+  .nutrizi {
+    flex-direction: column-reverse;
+  }
+
+  .img-nutrizi img {
+    position: absolute;
+    z-index: -1;
+    object-position: -250px center;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+
+  .desc-nutrizi {
+    margin-left: 0;
+    padding: 0 20px;
+    width: 60%;
+  }
+  /* SECTION NUTRIZI END */
+
+  /* SECTION DATA */
+  .img-data img {
+    width: 100%;
+  }
+
+  .data hr {
+    margin-left: 0;
+  }
+
+  .desc-data .source a {
+    display: block;
+    width: 100%;
+    word-break: break-all;
+  }
+
+  .desc-data {
+    padding: 0 20px;
+    margin-right: 0;
+  }
+
+  .desc-data .source {
+    font-size: 0.7rem !important;
+  }
+  /* SECTION DATA END */
+
+  /* ACCORDION */
+  .accordion-pack span {
+    font-size: 0.8rem;
+  }
+
+  .accordion {
+    padding: 0.5rem !important;
+  }
+
+  .panel p {
+    padding: 0 0 10px 0;
+  }
+  /* ACCORDION END */
+
+  /* BMI */
+  .bmi {
+    position: relative;
+  }
+
+  .bmi li {
+    font-size: 0.8rem;
+  }
+
+  .desc-bmi {
+    padding: 0 20px;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .desc-bmi h1 {
+    width: 70%;
+  }
+
+  .img-bmi img {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -200px;
+    width: 23rem;
+    height: 23rem;
+  }
+  /* INPUT BMI */
+  .bmi .bmiInputContainer .bmiInputWrapper {
+    width: 80%;
+  }
+
+  .bmi .bmiInputContainer .bmiInputWrapper .title-input h1 {
+    padding-top: 0;
+    font-size: 1.5rem;
+  }
+
+  .bmi .bmiInputWrapper #input {
+    padding: 0 6px;
+    height: 2rem;
+    font-size: 0.8rem;
+  }
+
+  .bmi .bmiInputContainer .bmiInputWrapper .input {
+    gap: 10px;
+  }
+
+  .bmi .hitung,
+  .bmr .hitung {
+    padding: 5px 20px;
+  }
+  /* BMI END */
+
+  /* BMR */
+  .bmr {
+    position: relative;
+  }
+
+  .bmr li {
+    font-size: 0.8rem;
+  }
+
+  .desc-bmr {
+    padding: 0 20px;
+    margin-left: 0;
+    width: 100%;
+    z-index: 2;
+  }
+
+  .desc-bmr h1 {
+    width: 70%;
+    padding: 0;
+  }
+
+  .img-bmr img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -200px;
+    width: 23rem;
+    height: 23rem;
+  }
+  /* INPUT BMR */
+  .bmr .bmrInputContainer .bmrInputWrapper {
+    width: 80%;
+  }
+
+  .bmr .bmrInputContainer .bmrInputWrapper .title-input h1 {
+    padding-top: 0;
+    font-size: 1.5rem;
+  }
+
+  .bmr .bmrInputWrapper #input {
+    padding: 0 6px;
+    height: 2rem;
+    font-size: 0.8rem;
+  }
+
+  .bmr .bmrInputContainer .bmrInputWrapper .input {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bmr .bmrInputContainer #outputBmr.outputBmr {
+    padding: 0;
+  }
+
+  .bmr .bmrInputContainer #outputBmr.outputBmr p {
+    margin: 0 !important;
+  }
+  /* BMR END */
+
+  .quote {
+    height: 50dvh !important;
+  }
+
+  .quote h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    width: 90%;
+  }
+
+  .quote hr {
+    margin-top: 20px;
+    width: 40% !important;
+  }
+
+  footer {
+    padding: 10% 15%;
+    flex-direction: column;
+  }
+
+  footer .left {
+    text-align: center;
+    width: 100% !important;
+  }
+
+  footer .left hr {
+    margin: 15px auto;
+    width: 70% !important;
+  }
+
+  footer .left .icons i {
+    font-size: 1.4rem;
+    padding: 15px;
+  }
+
+  footer .middle {
+    width: 100% !important;
+    margin: 15px 0;
+  }
+
+  footer .middle .social {
+    text-align: center;
+    flex-direction: column;
+    gap: 0.7em;
+    margin: 7px 0;
+  }
+
+  footer .middle .title p {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem !important;
+  }
+
+  footer .middle .invisible {
+    display: none;
+  }
+
+  footer .middle .social p {
+    font-size: 0.8rem;
+  }
+
+  footer .middle .social i {
+    font-size: 1.2rem;
+  }
+
+  footer .right {
+    text-align: center;
+    width: 100% !important;
+    margin: 15px 0;
+  }
 }

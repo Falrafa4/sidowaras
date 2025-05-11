@@ -36,23 +36,24 @@
       <li><a href="#kalkulator">Kalkulator</a></li>
       <li><a href="#kontak">Kontak</a></li>
     </ul>
+    <a id="toggleSideBar"><i class="fas fa-bars" id="toggleIcon"></i></a>
   </nav>
 
   <header>
     <div class="main-content">
       <h1>SIDOWARAS</h1>
-      <p>Inovasi teknologi dalam meningkatkan kesehatan di Sidoarjo</p>
+      <p>Inovasi Dalam Meningkatkan Nutrisi & Kesehatan di Sidoarjo</p>
       <a href="#sidowaras">Jelajah</a>
     </div>
-    <img src="assets/hero-img.jpg" alt="" />
+    <img src="assets/hero-img.jpg" alt="">
   </header>
 
   <main>
     <!-- pengertian darjo -->
     <section id="sidowaras" class="sidowaras" style="display: flex">
       <div class="img-sda">
-        <img src="assets/sidoarjo.png" alt="Logo Sidoarjo" class="logo-sda" />
-        <img src="assets/jayandaru.jpg" alt="Monumen Jayandaru" class="jayandaru" />
+        <img src="/assets/sidoarjo.png" alt="Logo Sidoarjo" class="logo-sda">
+        <img src="/assets/jayandaru.jpg" alt="Monumen Jayandaru" class="jayandaru">
       </div>
       <div class="desc-sda">
         <div class="desc-title">
@@ -62,7 +63,7 @@
         <div class="detail-desc">
           <p>
             SidoWaras adalah nama website yang kami angkat dengan makna
-            <strong>‘Sidoarjo Waras’</strong>. SidoWaras hadir dengan dasar
+            <strong>"Sidoarjo Waras"</strong>. SidoWaras hadir dengan dasar
             masalah kesehatan berat badan. Website ini berisikan pengetahuan
             dan himbauan pada masyarakat manapun, khususnya masyarakat kota
             Sidoarjo supaya dapat mengetahui index massa tubuh dan kebutuhan
@@ -73,8 +74,10 @@
             penampilan, tetapi juga menyangkut risiko kesehatan jangka panjang
             seperti obesitas, diabetes dan gangguan metabolik lainnya.
             Naasnya, masih banyak masyarakat yang belum memahami cara mengukur
-            kondisi tubuh mereka dengan akurat dan ilmiah. Oleh karena itu,
-            SidoWaras hadir untuk menjembatani kebutuhan tersebut dengan
+            kondisi tubuh mereka dengan akurat dan ilmiah.
+          </p>
+          <p>
+            Oleh karena itu, SidoWaras hadir untuk menjembatani kebutuhan tersebut dengan
             menyediakan informasi dan alat bantu yang mudah digunakan. Dengan
             pendekatan berbasis data dan edukasi, website ini bertujuan untuk
             meningkatkan kesadaran masyarakat akan pentingnya menjaga
@@ -105,20 +108,19 @@
       </div>
 
       <div class="img-nutrizi">
-        <img src="assets/nutrisi-gizi.jpg" alt="Ilustrasi Nutrisi" />
+        <img src="assets/nutrisi-gizi.jpg" alt="Ilustrasi Nutrisi">
       </div>
     </section>
 
     <!-- data nutrisi -->
     <section class="data" id="data">
       <div class="img-data">
-        <img src="assets/nutrisi-sda.jpg" alt="Data Nutrisi SDA" />
+        <img src="assets/nutrisi-sda.jpg" alt="Data Nutrisi SDA">
       </div>
 
       <div class="desc-data">
         <h1>
-          Data Nutrisi di<br />
-          Sidoarjo
+          Data Nutrisi di Sidoarjo
         </h1>
         <hr />
         <p>
@@ -129,15 +131,14 @@
         <p>
           Hasil Survei Status Gizi Indonesia (SSGI) skala nasional tahun 2021,
           prevalensi stunting nasional sebesar 24,4%.  Sedangkan SSGI di Jawa
-          Timur, prevalensi stuntingnya mencapai 23,5% dan Kabupaten Sidoarjo
-          14,8%.
+          Timur, prevalensi stuntingnya mencapai 23,5% dan Kabupaten Sidoarjo 14,8%.
         </p>
         <p>
           Untuk SSGI nasional tahun 2022, prevalensi stunting nasional sebesar
           21,6%, dan Jawa Timur 19,2 % serta Kabupaten Sidoarjo 16,1%.
         </p>
         <br />
-        <a href="https://www.sidoarjokab.go.id/berita/detail/1699604569/previous" target="_blank">Sumber</a>
+        <p class="source">Sumber: <a href="https://www.sidoarjokab.go.id/berita/detail/1699604569/previous" target="_blank">https://www.sidoarjokab.go.id/berita/detail/1699604569/previous <i class="fa-solid fa-up-right-from-square"></i></a></p>
       </div>
     </section>
     <div id="kalkulator"></div>
@@ -217,7 +218,7 @@
                 </p>
               </li>
               <li>
-                Umur (pengaruh tidak langsung)
+                Usia (pengaruh tidak langsung)
                 <p>
                   Komposisi tubuh berubah seiring bertambahnya usia, walau
                   berat tetap.
@@ -267,7 +268,7 @@
           <div class="input">
             <input type="number" class="inputBb" id="input" min="1" maxlength="3" placeholder="Berat Badan (KG)" />
             <input type="number" class="inputTb" id="input" min="1" maxlength="3" placeholder="Tinggi Badan (cm)" />
-            <button class="submitBmi" onclick="outputBmi('output')" id="input">
+            <button class="submitBmi" onclick="outputBmi('outputBmi')" id="input">
               Hitung &amp; analisis
             </button>
             <button class="kembali" id="input" onclick="nonaktif('inputBmiOverlay')">
@@ -277,7 +278,7 @@
 
           <br>
 
-          <div class="output" id="output">
+          <div class="outputBmi" id="outputBmi">
             <p class="output-text"></p>
           </div>
         </div>
@@ -311,7 +312,7 @@
           </div>
 
           <button class="accordion">
-            <span>Bagaimana Cara Menghitung BMR?</span>
+            <span>Mengapa BMR Sangat Penting?</span>
           </button>
           <div class="panel">
             <ol>
@@ -471,20 +472,22 @@
             <hr />
           </div>
           <div class="input">
-            <input type="number" class="inputBb" id="input" min="1" maxlength="3" placeholder="Berat Badan (kg)" />
-            <input type="number" class="inputTb" id="input" min="1" maxlength="3" placeholder="Tinggi Badan (cm)" />
-            <input type="number" class="inputUmur" id="input" min="1" maxlength="2" placeholder="Umur (tahun)" />
+            <input type="number" class="inputBbBmr" id="input" min="1" maxlength="3" placeholder="Berat Badan (kg)" />
+            <input type="number" class="inputTbBmr" id="input" min="1" maxlength="3" placeholder="Tinggi Badan (cm)" />
+            <input type="number" class="inputUsia" id="input" min="1" maxlength="2" placeholder="Usia (tahun)" />
             <select class="jekel" name="jenis_kelamin" id="input">
-              <option value="laki-laki">Laki-laki</option>
-              <option value="perempuan">Perempuan</option>
+              <option value="" hidden selected disabled>Jenis Kelamin</option>
+              <option value="Laki-laki">Laki-laki</option>
+              <option value="Perempuan">Perempuan</option>
             </select>
             <select class="tingkatAktivitas" name="tingkat_aktivitas" id="input">
+              <option value="" hidden selected disabled>Tingkat Aktivitas</option>
               <option value="Sedentary">Sedentary</option>
               <option value="Ringan">Ringan</option>
               <option value="Sedang">Sedang</option>
               <option value="Aktif">Aktif</option>
             </select>
-            <button type="submit" class="submitBmr" onclick="outputBmi('output')" id="input">
+            <button type="submit" class="submitBmr" onclick="outputBmr('outputBmr')" id="input">
               Hitung &amp; analisis
             </button>
             <button class="kembali" id="input" onclick="nonaktif('inputBmrOverlay')">
@@ -494,8 +497,8 @@
 
           <br />
 
-          <div class="output" id="output">
-            <p class="output-text"></p>
+          <div class="outputBmr" id="outputBmr">
+            <p class="output-text-bmr"></p>
           </div>
         </div>
       </div>
@@ -504,12 +507,12 @@
     <img src="assets/wave2.svg" alt="" style="width: 100%; ">
 
     <section class="quote">
-      <h1>Your food choices are your health choices</h1>
+      <h1>Healthy choices start with your food choices.</h1>
       <hr />
     </section>
   </main>
 
-  <footer>
+  <footer id="kontak">
     <div class="left">
       <h1>SidoWaras</h1>
       <hr />
@@ -524,7 +527,7 @@
     <div class="middle">
       <div class="social title">
         <i class="invisible fas fa-phone"></i>
-        <p>Hubungi Kami</p>
+        <p><b>Hubungi Kami</b></p>
       </div>
       <div class="social call">
         <i class="fas fa-phone"></i>
@@ -541,7 +544,7 @@
     </div>
 
     <div class="right">
-      <p>Lihat Juga</p>
+      <p class="right-title"><b>Lihat Juga</b></p>
       <a href="#sidowaras">Sidoarjo</a>
       <a href="#nutrizi">Nutrisi</a>
       <a href="#kalkulator">Kalkulator</a>
