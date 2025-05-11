@@ -202,9 +202,15 @@ main .desc-sda .sidowaras .desc-title {
   align-items: flex-end;
 }
 
+main .desc-sda .desc-title hr {
+  margin-left: auto;  
+  width: 60%;
+}
+
 main .desc-sda .detail-desc p {
   margin-top: 20px;
   font-size: 0.95rem;
+  text-align: justify;
 }
 /* SECTION SIDOWARAS END */
 
@@ -216,7 +222,7 @@ main .desc-sda .detail-desc p {
 }
 
 .nutrizi hr {
-  width: 20rem;
+  width: 60%;
   border: none;
   border-bottom: 1px solid black;
 }
@@ -234,6 +240,7 @@ main .desc-sda .detail-desc p {
 .desc-nutrizi {
   margin-left: 5rem;
   display: flex;
+  text-align: justify;
   flex-direction: column;
   justify-content: center;
 }
@@ -264,13 +271,14 @@ main .desc-sda .detail-desc p {
 }
 
 .desc-data hr {
-  width: 15rem;
+  width: 60%;
   margin-left: auto;
 }
 
 .desc-data p {
   margin-top: 20px;
   font-size: 0.95rem;
+  text-align: justify;
 }
 
 .desc-data .source {
@@ -364,7 +372,7 @@ main .desc-sda .detail-desc p {
 }
 
 .bmi hr {
-  width: 25rem;
+  width: 60%;
 }
 
 .desc-bmi {
@@ -429,7 +437,7 @@ main .desc-sda .detail-desc p {
   position: absolute;
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  padding: 1.8rem;
   width: 40%;
   animation: coolTransition 0.5s;
 }
@@ -515,10 +523,12 @@ main .desc-sda .detail-desc p {
 }
 
 .bmr hr {
-  width: 25rem;
+  width: 60%;
+  margin-left: auto;
 }
 
 .desc-bmr {
+  text-align: right;
   margin-right: 5rem;
   width: 80dvw;
 }
@@ -549,6 +559,10 @@ main .desc-sda .detail-desc p {
   padding: 0 18px;
   background-color: #ebfceb;
   color: #395b40;
+}
+
+.bmr .accordion-pack p {
+  text-align: justify;
 }
 
 .bmr .accordion:hover {
@@ -603,7 +617,7 @@ main .desc-sda .detail-desc p {
   position: absolute;
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  padding: 1.8rem;
   width: 40%;
   height: fit-content;
   animation: coolTransition 0.5s;
@@ -621,6 +635,7 @@ main .desc-sda .detail-desc p {
 
 .bmr .bmrInputWrapper .title-input hr {
   width: 55%;
+  margin-left: 0;
 }
 
 .bmr .bmrInputWrapper .input {
@@ -645,10 +660,6 @@ main .desc-sda .detail-desc p {
 
 .bmr .bmrInputContainer .bmrInputWrapper .input select {
   cursor: pointer;
-}
-
-.bmr .bmrInputContainer .bmrInputWrapper .input select:valid {
-  color: gray;
 }
 
 .bmr .bmrInputContainer .bmrInputWrapper .input input:focus,
@@ -681,38 +692,49 @@ main .desc-sda .detail-desc p {
 }
 
 .bmr .bmrInputWrapper .input .submitBmr:hover {
-  background-color: #395b40;
-  color: #f6fff8;
-  border: 1px solid #f6fff8;
+  background-color: #fff;
 }
 
 .bmr .bmrInputWrapper .input .kembali {
   grid-area: kembali;
-  background-color: #f6fff8;
+  background-color: #395b40;
   border: none;
   border-radius: 5px;
+  border: 1px solid #f6fff8;
   height: 2.5rem;
-  color: #395b40;
+  color: #f6fff8;
   cursor: pointer;
-}
-
-.bmr .bmrInputWrapper .input .kembali:hover {
-  background-color: #ebfceb;
+  transition: 0.3s;
 }
 
 .bmr .bmrInputContainer #outputBmr.outputBmr {
   display: none;
   align-items: center;
   justify-content: center;
-  padding-top: 15px;
-  padding-bottom: 10px;
   animation: coolTransition 0.3s;
   flex-direction: column;
+  text-align: justify;
 }
 
-.bmr .bmrInputContainer #outputBmr.outputBmr table {
+.bmr .bmrInputContainer #outputBmr.outputBmr .bmr-table {
+  border-radius: 3px;
+  margin: 20px 0;
   color: black;
   background-color: #F6FFF8;
+  width: 100%;
+  text-align: center;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.bmr .bmrInputContainer #outputBmr.outputBmr .bmr-table th {
+  padding: 3px;
+  border: solid 1px #395b40;
+}
+
+.bmr .bmrInputContainer #outputBmr.outputBmr .bmr-table td {
+  padding: 3px;
+  border: solid 1px #395b40;
 }
 /* SECTION BMR END */
 
@@ -785,12 +807,16 @@ footer .social {
 }
 
 footer .social .fas {
-  font-size: 1.2em;
+  font-size: 0.9em;
+}
+
+footer .middle .title p {
+  font-size: 0.9rem;
 }
 
 footer .social p {
   font-family: "Poppins";
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 footer .left hr {
@@ -803,6 +829,10 @@ footer .right {
   flex-direction: column;
 }
 
+footer .right-title {
+  font-size: 0.9rem;
+}
+
 footer .right p {
   text-decoration: none;
   color: #fff;
@@ -810,7 +840,7 @@ footer .right p {
 }
 
 footer .right a {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   text-decoration: none;
   color: #ccc;
   font-family: "Poppins";
@@ -942,6 +972,10 @@ footer .right a:hover {
     padding: 0 20px;
     width: 100% !important;
   }
+
+  .sidowaras .desc-sda .desc-title hr {
+    margin-left: 0;
+  }
   /* SECTION SIDOWARAS END */
 
   /* SECTION NUTRIZI */
@@ -1044,7 +1078,7 @@ footer .right a:hover {
   }
 
   .bmi .bmiInputWrapper #input {
-    padding: 0 6px;
+    padding: 10px;
     height: 2rem;
     font-size: 0.8rem;
   }
@@ -1055,7 +1089,7 @@ footer .right a:hover {
 
   .bmi .hitung,
   .bmr .hitung {
-    padding: 5px 20px;
+    padding: 10px 20px;
   }
   /* BMI END */
 
@@ -1070,9 +1104,13 @@ footer .right a:hover {
 
   .desc-bmr {
     padding: 0 20px;
-    margin-left: 0;
+    text-align: left;
     width: 100%;
     z-index: 2;
+  }
+
+  .desc-bmr hr {
+    margin-left: 0
   }
 
   .desc-bmr h1 {
@@ -1091,6 +1129,7 @@ footer .right a:hover {
   /* INPUT BMR */
   .bmr .bmrInputContainer .bmrInputWrapper {
     width: 80%;
+    overflow: scroll;
   }
 
   .bmr .bmrInputContainer .bmrInputWrapper .title-input h1 {
@@ -1116,6 +1155,16 @@ footer .right a:hover {
 
   .bmr .bmrInputContainer #outputBmr.outputBmr p {
     margin: 0 !important;
+  }
+
+  .bmr .bmrInputContainer #outputBmr.outputBmr .bmr-table th {
+    font-size: 0.8rem;
+    padding: 5px;
+  }
+
+  .bmr .bmrInputContainer #outputBmr.outputBmr .bmr-table td {
+    font-size: 0.8rem;
+    padding: 5px;
   }
   /* BMR END */
 
@@ -1189,4 +1238,4 @@ footer .right a:hover {
     width: 100% !important;
     margin: 15px 0;
   }
-}
+}   

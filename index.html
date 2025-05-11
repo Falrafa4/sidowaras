@@ -33,6 +33,7 @@
       <li><a href="#">Beranda</a></li>
       <li><a href="#sidowaras">Latar Belakang</a></li>
       <li><a href="#nutrizi">Nutrisi</a></li>
+      <li><a href="#data">Data</a></li>
       <li><a href="#kalkulator">Kalkulator</a></li>
       <li><a href="#kontak">Kontak</a></li>
     </ul>
@@ -135,7 +136,7 @@
         </p>
         <p>
           Untuk SSGI nasional tahun 2022, prevalensi stunting nasional sebesar
-          21,6%, dan Jawa Timur 19,2 % serta Kabupaten Sidoarjo 16,1%.
+          21,6%, dan Jawa Timur 19,2% serta Kabupaten Sidoarjo 16,1%.
         </p>
         <br />
         <p class="source">Sumber: <a href="https://www.sidoarjokab.go.id/berita/detail/1699604569/previous" target="_blank">https://www.sidoarjokab.go.id/berita/detail/1699604569/previous <i class="fa-solid fa-up-right-from-square"></i></a></p>
@@ -250,7 +251,7 @@
         </div>
 
         <button class="hitung" onclick="aktif('inputBmiOverlay')">
-          Hitung BMI
+          Hitung BMI Kamu!
         </button>
       </div>
 
@@ -275,9 +276,7 @@
               Batal
             </button>
           </div>
-
           <br>
-
           <div class="outputBmi" id="outputBmi">
             <p class="output-text"></p>
           </div>
@@ -378,23 +377,23 @@
               Anda perlu mengalikan BMR dengan tingkat aktivitas fisik sebagai
               berikut.
             </p>
-            <ul>
+            <ol>
+              <ul>
               <li>Hampir tidak pernah berolahraga: kalikan 1,2.</li>
               <li>Jarang berolahraga: kalikan 1,3.</li>
               <li>
                 Sering berolahraga atau beraktivitas fisik berat: kalikan 1,4.
               </li>
             </ul>
+            </ol>
             <p>
               Sebagai contoh, ada seorang wanita berusia 26 tahun yang
               memiliki berat badan 60 kg dan tinggi badan 160 cm.
             </p>
-            <br />
             <p>
               Ia hampir tidak pernah berolahraga. Ini berarti BMR-nya sebesar
               1.540 kkal, sedangkan kebutuhan kalorinya sebesar 1.848 kkal.
             </p>
-            <br />
           </div>
 
           <button class="accordion">
@@ -461,7 +460,7 @@
         </div>
 
         <button class="hitung" onclick="aktif('inputBmrOverlay')">
-          Hitung BMR
+          Hitung BMR Kamu!
         </button>
       </div>
       <!-- input bmr -->
@@ -482,10 +481,10 @@
             </select>
             <select class="tingkatAktivitas" name="tingkat_aktivitas" id="input">
               <option value="" hidden selected disabled>Tingkat Aktivitas</option>
-              <option value="Sedentary">Sedentary</option>
-              <option value="Ringan">Ringan</option>
-              <option value="Sedang">Sedang</option>
-              <option value="Aktif">Aktif</option>
+              <option value="Sedentary">Sedentary (Tidak banyak bergerak)</option>
+              <option value="Ringan">Light (Ringan)</option>
+              <option value="Sedang">Moderate (Sedang)</option>
+              <option value="Aktif">Heavy (Berat)</option>
             </select>
             <button type="submit" class="submitBmr" onclick="outputBmr('outputBmr')" id="input">
               Hitung &amp; analisis
@@ -494,9 +493,7 @@
               Batal
             </button>
           </div>
-
-          <br />
-
+          <br>
           <div class="outputBmr" id="outputBmr">
             <p class="output-text-bmr"></p>
           </div>
@@ -545,8 +542,8 @@
 
     <div class="right">
       <p class="right-title"><b>Lihat Juga</b></p>
-      <a href="#sidowaras">Sidoarjo</a>
       <a href="#nutrizi">Nutrisi</a>
+      <a href="#data">Data</a>
       <a href="#kalkulator">Kalkulator</a>
     </div>
   </footer>

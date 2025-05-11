@@ -80,19 +80,23 @@ function outputBmi(id) {
   if (bmi <= 18.5) {
     document.querySelector(
       ".output-text"
-    ).innerHTML = `Berdasarkan perhitungan, Indeks Massa Tubuh kamu sebesar <b>${bmi}</b>! Ini berarti kamu termasuk kategori underweight (berat badan kurang). Maka kamu harus surplus atau memperbanyak kalori harian kamu lebih dari biasanya!`;
+    ).innerHTML = `BMI kamu: <b>${bmi}, Underweight</b> <br><br>
+    Berat badan kamu masih di bawah ideal. Coba tambah porsi makan dikit dan jangan lupa olahraga yang rutin ya!`;
   } else if (bmi <= 22.9 && bmi > 18.5) {
     document.querySelector(
       ".output-text"
-    ).innerHTML = `Berdasarkan perhitungan, Indeks Massa Tubuh kamu sebesar <b>${bmi}</b>! Ini berarti kamu termasuk kategori ideal (berat badan ideal). Maka kamu harus mempertahankannya agar tidak kegemukan atau kekurusan!`;
+    ).innerHTML = `BMI kamu: <b>${bmi}, Normal</b> <br><br>
+    Mantap! Berat badan kamu udah ideal. Tinggal jaga pola makan dan tetap aktif aja.`;
   } else if (bmi <= 24.9 && bmi > 23) {
     document.querySelector(
       ".output-text"
-    ).innerHTML = `Berdasarkan perhitungan, Indeks Massa Tubuh kamu sebesar <b>${bmi}</b>! Ini berarti kamu termasuk kategori overweight (berat badan berlebih). Maka kamu harus melakukan defisit kalori atau mengurangi asupan kalori kamu lebih dari biasanya!`;
+    ).innerHTML = `BMI kamu: <b>${bmi}, Overweight</b> <br><br>
+    Berat badan kamu agak berlebih nih. Gak apa-apa, coba atur pola makan dan gerak lebih banyak pelan-pelan aja.`;
   } else if (bmi > 25) {
     document.querySelector(
       ".output-text"
-    ).innerHTML = `Berdasarkan perhitungan, Indeks Massa Tubuh kamu sebesar <b>${bmi}</b>! Wah gawat, kamu termasuk kategori obesitas. Maka kamu harus melakukan defisit kalori besar-besaran serta melakukan diet untuk mengurangi berat badanmu!`;
+    ).innerHTML = `BMI kamu: <b>${bmi}, Obese</b> <br><br>
+    Berat badan udah masuk kategori obesitas. Nggak usah panik, mulai aja dari kurangi makan manis-manis dan tambah jalan kaki tiap hari.`;
   } else {
     document.querySelector(".output-text").innerHTML = "Invalid input!";
   }
@@ -169,39 +173,39 @@ function outputBmr(id) {
 
   document.querySelector(
     ".outputBmr"
-  ).innerHTML = `<p class="output-text-bmr">Berdasarkan perhitungan, <b>Basal Metabolic Rate</b> kamu sebesar <b> ${bmr} kkal/hari</b>! karena level aktivitasmu adalah <b>${aktivitas}</b> yang berarti <b>${pesanAktivitas}</b>, maka kebutuhan kalori harian kamu adalah <b>${bmt} kkal/hari</b>, setara dengan <b>${setaraDengan} kue nastar!</b></p>
+  ).innerHTML = `<p><b>BMR</b> kamu: <b>${bmr} kkal/hari</b>. Karena aktivitasmu <b>${aktivitas}</b> (<b>${pesanAktivitas}</b>), kebutuhan kalori harianmu jadi <b>${bmt} kkal</b> — setara dengan <b>${setaraDengan} kue nastar!</b></p>
   
-  <table>
-            <tr>
-              <th>Tingkat Aktivitas</th>
-              <th>Level Aktivitas</th>
-              <th>BMR</th>
-              <th>TDEE</th>
-            </tr>
-            <tr>
-              <td>Sedentary</td>
-              <td>1.2</td>
-              <td>${bmr}</td>
-              <td>${ifSedentary}</td>
-            </tr>
-            <tr>
-              <td>Ringan</td>
-              <td>1.5</td>
-              <td>${bmr}</td>
-              <td>${ifRingan}</td>
-            </tr>
-            <tr>
-              <td>Sedang</td>
-              <td>1.6</td>
-              <td>${bmr}</td>
-              <td>${ifSedang}</td>
-            </tr>
-            <tr>
-              <td>Aktif</td>
-              <td>1.85</td>
-              <td>${bmr}</td>
-              <td>${ifAktif}</td>
-            </tr>
+  <table class="bmr-table">
+    <tr>
+      <th>Tingkat Aktivitas</th>
+      <th>Level Aktivitas</th>
+      <th>BMR</th>
+      <th>TDEE</th>
+    </tr>
+    <tr>
+      <td>Sedentary</td>
+      <td>1.2</td>
+      <td>${bmr}</td>
+      <td>${ifSedentary}</td>
+    </tr>
+    <tr>
+      <td>Ringan</td>
+      <td>1.5</td>
+      <td>${bmr}</td>
+      <td>${ifRingan}</td>
+    </tr>
+    <tr>
+      <td>Sedang</td>
+      <td>1.6</td>
+      <td>${bmr}</td>
+      <td>${ifSedang}</td>
+    </tr>
+    <tr>
+      <td>Aktif</td>
+      <td>1.85</td>
+      <td>${bmr}</td>
+      <td>${ifAktif}</td>
+    </tr>
   </table>
   `;
 }
