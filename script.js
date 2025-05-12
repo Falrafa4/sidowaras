@@ -77,7 +77,6 @@ function outputBmi(id) {
   let tinggiBadanMeterKuadrat = (tinggiBadan / m) * (tinggiBadan / m);
   let bmi = beratBadan / tinggiBadanMeterKuadrat;
   bmi = bmi.toFixed(2);
-  console.log(bmi);
   if (bmi <= 18.5) {
     document.querySelector(
       ".output-text"
@@ -111,8 +110,8 @@ document.querySelectorAll(".inputTb, .inputBb").forEach((input) => {
   });
 });
 
-// function untuk menghitung BMR
 
+// function untuk menghitung BMR
 function outputBmr(id) {
   // memunculkan element pada id variable id
   let element = document.getElementById(id);
