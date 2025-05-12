@@ -77,6 +77,7 @@ function outputBmi(id) {
   let tinggiBadanMeterKuadrat = (tinggiBadan / m) * (tinggiBadan / m);
   let bmi = beratBadan / tinggiBadanMeterKuadrat;
   bmi = bmi.toFixed(2);
+  console.log(bmi);
   if (bmi <= 18.5) {
     document.querySelector(
       ".output-text"
@@ -87,12 +88,12 @@ function outputBmi(id) {
       ".output-text"
     ).innerHTML = `BMI kamu: <b>${bmi}, Normal</b> <br><br>
     Mantap! Berat badan kamu udah ideal. Tinggal jaga pola makan dan tetap aktif aja.`;
-  } else if (bmi <= 24.9 && bmi > 23) {
+  } else if (bmi <= 24.9 && bmi > 22.9) {
     document.querySelector(
       ".output-text"
     ).innerHTML = `BMI kamu: <b>${bmi}, Overweight</b> <br><br>
     Berat badan kamu agak berlebih nih. Gak apa-apa, coba atur pola makan dan gerak lebih banyak pelan-pelan aja.`;
-  } else if (bmi > 25) {
+  } else if (bmi > 24.9) {
     document.querySelector(
       ".output-text"
     ).innerHTML = `BMI kamu: <b>${bmi}, Obese</b> <br><br>
