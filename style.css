@@ -402,6 +402,10 @@ main .desc-sda .detail-desc p {
   transition: 0.3s;
 }
 
+.bmi .panel {
+  text-align: justify;
+}
+
 .bmi .hitung:hover {
   background-color: transparent;
   border: 1px solid #395b40;
@@ -560,6 +564,7 @@ main .desc-sda .detail-desc p {
   padding: 0 18px;
   background-color: #ebfceb;
   color: #395b40;
+  text-align: justify;
 }
 
 .bmr .accordion-pack p {
