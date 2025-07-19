@@ -81,22 +81,26 @@ function outputBmi(id) {
     document.querySelector(
       ".output-text"
     ).innerHTML = `BMI kamu: <b>${bmi}, Underweight</b> <br><br>
-    Berat badan kamu masih di bawah ideal. Coba tambah porsi makan dikit dan jangan lupa olahraga yang rutin ya!`;
+    Berat badan kamu masih di bawah ideal. Coba tambah porsi makan dikit dan jangan lupa olahraga yang rutin ya! <br>
+    <a href='rekomendasi/underweight/' class="rekomendasi" target='\_blank'>Lihat Rekomendasi Olahraga Di Sini!</a>`;
   } else if (bmi <= 22.9 && bmi > 18.5) {
     document.querySelector(
       ".output-text"
     ).innerHTML = `BMI kamu: <b>${bmi}, Normal</b> <br><br>
-    Mantap! Berat badan kamu udah ideal. Tinggal jaga pola makan dan tetap aktif aja.`;
+    Mantap! Berat badan kamu udah ideal. Tinggal jaga pola makan dan tetap aktif aja. <br>
+    <a href='rekomendasi/normal/' class="rekomendasi" target='\_blank'>Lihat Rekomendasi Olahraga Di Sini!</a>`;
   } else if (bmi <= 24.9 && bmi > 22.9) {
     document.querySelector(
       ".output-text"
     ).innerHTML = `BMI kamu: <b>${bmi}, Overweight</b> <br><br>
-    Berat badan kamu agak berlebih nih. Gak apa-apa, coba atur pola makan dan gerak lebih banyak pelan-pelan aja.`;
+    Berat badan kamu agak berlebih nih. Gak apa-apa, coba atur pola makan dan gerak lebih banyak pelan-pelan aja. <br>
+    <a href='rekomendasi/overweight/' class="rekomendasi" target='\_blank'>Lihat Rekomendasi Olahraga Di Sini!</a>`;
   } else if (bmi > 24.9) {
     document.querySelector(
       ".output-text"
     ).innerHTML = `BMI kamu: <b>${bmi}, Obese</b> <br><br>
-    Berat badan udah masuk kategori obesitas. Nggak usah panik, mulai aja dari kurangi makan manis-manis dan tambah jalan kaki tiap hari.`;
+    Berat badan udah masuk kategori obesitas. Nggak usah panik, mulai aja dari kurangi makan manis-manis dan tambah jalan kaki tiap hari. <br>
+    <a href='rekomendasi/obese/' class="rekomendasi" target='\_blank'>Lihat Rekomendasi Olahraga Di Sini!</a>`;
   } else {
     document.querySelector(".output-text").innerHTML = "Invalid input!";
   }
@@ -109,7 +113,6 @@ document.querySelectorAll(".inputTb, .inputBb").forEach((input) => {
     }
   });
 });
-
 
 // function untuk menghitung BMR
 function outputBmr(id) {
@@ -175,7 +178,7 @@ function outputBmr(id) {
     ".outputBmr"
   ).innerHTML = `<p><b>BMR</b> kamu: <b>${bmr} kkal/hari</b>. Karena aktivitasmu <b>${aktivitas}</b> (<b>${pesanAktivitas}</b>), kebutuhan kalori harianmu jadi <b>${bmt} kkal</b> — setara dengan <b>${setaraDengan} kue nastar!</b></p>
   
-  <table class="bmr-table">
+  <!--<table class="bmr-table">
     <tr>
       <th>Tingkat Aktivitas</th>
       <th>Level Aktivitas</th>
@@ -206,8 +209,11 @@ function outputBmr(id) {
       <td>${bmr}</td>
       <td>${ifAktif}</td>
     </tr>
-  </table>
+  </table> -->
+  <button class="redirect-saran-makanan" onclick="redirectSaranMakanan()">Saran Menu Makanan</button>
   `;
+
+  localStorage.setItem("bmr", bmt);
 }
 
 inputBmr = document.querySelector(".bmrInputContainer .input");
@@ -217,3 +223,7 @@ inputBmr.addEventListener("keydown", function (outputBmr) {
     buttonBmr.click();
   }
 });
+
+function redirectSaranMakanan() {
+  window.open("./saran-makanan/")
+};

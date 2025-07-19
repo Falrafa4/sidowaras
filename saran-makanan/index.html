@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://pngimg.com/d/letter_s_PNG7.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="./style.css">
+    <!-- Material Symbols -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <title>Sidowaras - Saran Menu Makanan</title>
+</head>
+<body>
+    <nav>
+        <a href="../#" class="logo">
+            <h1>SidoWaras</h1>
+        </a>
+        <ul>
+            <li><a href="../../#">Beranda</a></li>
+            <li><a href="../../#sidowaras">Latar Belakang</a></li>
+            <li><a href="../../#nutrizi">Nutrisi</a></li>
+            <li><a href="../../produk/">Produk</a></li>
+            <li><a href="../../#kalkulator">Kalkulator</a></li>
+            <li><a href="../../#kontak">Kontak</a></li>
+        </ul>
+        <a id="toggleSideBar"><i class="fas fa-bars" id="toggleIcon"></i></a>
+    </nav>
+
+    <main>
+        <h2>Saran Menu Makanan</h2>
+        <h3 class="rentang-bmr" id="rentang-bmr"></h3>
+
+        <div class="menu-makanan" id="menu-makanan">
+            <div class="day-and-night" id="day-and-night">
+                <div class="box pagi">
+                    <h3>Pagi</h3>
+                    <ul id="pagi"></ul>
+                </div>
+                <div class="vr"></div>
+                <div class="box siang">
+                    <h3>Siang</h3>
+                    <ul id="siang"></ul>
+                </div>
+                <div class="vr"></div>
+                <div class="box malam">
+                    <h3>Malam</h3>
+                    <ul id="malam"></ul>
+                </div>
+            </div>
+            <div class="snack-and-conclusion" id="snack-and-conclusion">
+                <div class="snack" id="snack">
+                    <h3>Snack</h3>
+                    <p></p>
+                </div>
+                <hr>
+                <div class="kesimpulan">
+                    <h3>Kesimpulan</h3>
+                    <p id="kesimpulan"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="kontak">
+        <div class="left">
+            <h1>SidoWaras</h1>
+            <hr />
+            <div class="icons">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-linkedin"></i>
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-instagram"></i>
+            </div>
+        </div>
+
+        <div class="middle">
+            <div class="social title">
+                <i class="invisible fas fa-phone"></i>
+                <p><b>Hubungi Kami</b></p>
+            </div>
+            <div class="social call">
+                <i class="fas fa-phone"></i>
+                <p>+62823-3456-7890</p>
+            </div>
+            <div class="social web">
+                <i class="fas fa-globe"></i>
+                <p>http://127.0.0.1:5500/</p>
+            </div>
+            <div class="social location">
+                <i class="fas fa-location-dot"></i>
+                <p>Jalan Raya Pecantingan, Sekardangan, Kec. Sidoarjo, Kab. Sidoarjo Jawa Timur 61215</p>
+            </div>
+        </div>
+
+        <div class="right">
+            <p class="right-title"><b>Lihat Juga</b></p>
+            <a href="../#nutrizi">Nutrisi</a>
+            <a href="../#data">Data</a>
+            <a href="../#kalkulator">Kalkulator</a>
+        </div>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+</html>

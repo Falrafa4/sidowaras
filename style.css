@@ -1,110 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Uncial+Antiqua&display=swap");
-
-:root {
-  --green: #395b40;
-}
-
-@keyframes coolTransition {
-  from {
-    opacity: 0;
-    transform: translateY(-100px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-
-::-webkit-scrollbar {
-  display: none;
-}
-
-body {
-  height: 100dvh;
-  font-family: "Poppins";
-  background-color: #f6fff8;
-}
-
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: inherit;
-}
-
-.logo {
-  font-family: "Uncial Antiqua";
-  text-decoration: none;
-  color: #fff;
-}
-
-.logo h1 {
-  font-weight: normal;
-  font-size: 1.5rem;
-}
-
-h1,
-ul {
-  margin-bottom: 0;
-}
-
-nav {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  display: flex;
-  background-color: rgba(57, 91, 64, 0.95);
-  justify-content: space-between;
-  align-items: center;
-  padding: 0px 60px;
-  z-index: 99;
-  height: 10dvh;
-  border-bottom: 1px solid #ffffff15;
-}
-
-#toggleSideBar {
-  display: none;
-}
-
-nav ul {
-  display: flex;
-  gap: 2.2rem;
-}
-
-nav ul.active::after {
-  display: none;
-}
-
-nav ul li {
-  list-style-type: none;
-}
-
-nav ul li a {
-  color: #cccccc;
-  font-size: 0.95rem;
-  font-family: "Poppins";
-  text-decoration: none;
-  transition: all 0.3s;
-}
-
-nav ul li a:hover {
-  color: #fff;
-}
-
 header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 100dvh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -391,7 +289,7 @@ main .desc-sda .detail-desc p {
   clip-path: circle(50%);
 }
 
-.bmi .hitung {
+.bmi .hitung, a.rekomendasi {
   background-color: #395b40;
   border: 1px solid #395b40;
   padding: 0.8rem 4rem;
@@ -402,11 +300,18 @@ main .desc-sda .detail-desc p {
   transition: 0.3s;
 }
 
+a.rekomendasi {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  font-size: 14px;
+}
+
 .bmi .panel {
   text-align: justify;
 }
 
-.bmi .hitung:hover {
+.bmi .hitung:hover, a.rekomendasi:hover {
   background-color: transparent;
   border: 1px solid #395b40;
   color: #395b40;
@@ -583,7 +488,7 @@ main .desc-sda .detail-desc p {
   color: #395b40;
 }
 
-.bmr .hitung {
+.bmr .hitung, button.redirect-saran-makanan {
   background-color: #f6fff8;
   border: 1px solid #f6fff8;
   padding: 0.8rem 4rem;
@@ -594,7 +499,12 @@ main .desc-sda .detail-desc p {
   transition: 0.3s;
 }
 
-.bmr .hitung:hover {
+button.redirect-saran-makanan {
+  width: 100%;
+  display: block;
+}
+
+.bmr .hitung:hover, button.redirect-saran-makanan:hover {
   border: 1px solid #f6fff8;
   background-color: #395b40;
   color: #f6fff8;
@@ -769,94 +679,6 @@ main .desc-sda .detail-desc p {
 }
 /* SECTION QUOTE END */
 
-footer {
-  display: flex;
-  background-color: #395b40;
-  padding: 40px 100px;
-  justify-content: space-between;
-  cursor: default;
-}
-
-footer h1 {
-  font-family: "Uncial Antiqua";
-  color: #fff;
-}
-
-hr {
-  margin-top: 12px;
-  margin-bottom: 25px;
-  opacity: 1;
-}
-
-footer .middle {
-  width: 33%;
-}
-
-footer .icons {
-  color: #fff;
-}
-
-footer .icons .fab {
-  padding: 20px;
-  font-size: 1.6em;
-}
-
-footer .social .invisible {
-  color: #395b40;
-}
-
-footer .social {
-  display: flex;
-  padding: 0.3rem 0;
-  color: #fff;
-  gap: 1.2em;
-}
-
-footer .social .fas {
-  font-size: 0.9em;
-}
-
-footer .middle .title p {
-  font-size: 0.9rem;
-}
-
-footer .social p {
-  font-family: "Poppins";
-  font-size: 0.8rem;
-}
-
-footer .left hr {
-  border: none;
-  border-bottom: 1px solid #fff;
-}
-
-footer .right {
-  display: flex;
-  flex-direction: column;
-}
-
-footer .right-title {
-  font-size: 0.9rem;
-}
-
-footer .right p {
-  text-decoration: none;
-  color: #fff;
-  font-family: "Poppins";
-}
-
-footer .right a {
-  font-size: 0.8rem;
-  text-decoration: none;
-  color: #ccc;
-  font-family: "Poppins";
-  margin-top: 10px;
-  transition: 0.3s;
-}
-
-footer .right a:hover {
-  color: #fff;
-}
 
 @media screen and (max-width: 768px) {
   ::-webkit-scrollbar {
